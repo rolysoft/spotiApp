@@ -15,8 +15,8 @@ export class HomeComponent implements OnInit {
   constructor( private spotifyService: SpotifyService, private http: HttpClient ) {
     
     this.spotifyService.getNewReleases().subscribe(data => {
-      console.log(data.albums.items);
-      this.nuevasCanciones = data.albums.items;
+      console.log(data);
+      this.nuevasCanciones = data;  //.albums.items;
     });
 
     /*this.http.get('https://restcountries.eu/rest/v2/lang/es').subscribe( (data: any) => {
