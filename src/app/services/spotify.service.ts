@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
 })
 export class SpotifyService {
 
-  token: string = 'BQB6D3FbO3J1Et2-QBGaWrjy962VD1U8sXALswQmJ5EWejoDTxS6XF54fBLXrpYtMx_oilp1N-Ljn8vAJMA';
+  token: string = 'BQCaZKyw-jWYdClRZBHAL7M1VwlRIv5gIBPz4sIXu_d8Y65mm9ZzwMW-d0EO21LueWhnLGYeQv4mbbAus6k';
   constructor(private http: HttpClient) {
     console.log('>git remote add origin https://github.com/rolysoft/spotiApp.git');
   }
