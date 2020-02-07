@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
 })
 export class SpotifyService {
 
-  token: string = 'BQCaZKyw-jWYdClRZBHAL7M1VwlRIv5gIBPz4sIXu_d8Y65mm9ZzwMW-d0EO21LueWhnLGYeQv4mbbAus6k';
+  token: string = 'BQCODM2SaA9O2HunI5zCFKF60g_tMVLBaJpHpl0Q_6w_9ns3UdS0gLRGM7ncT0duRcE86T1ZTCSxMs6itRk';
   constructor(private http: HttpClient) {
     console.log('>git remote add origin https://github.com/rolysoft/spotiApp.git');
   }
@@ -30,5 +30,13 @@ export class SpotifyService {
 
   getArtistas(termino: string) {
     return this.getQuery(`search?q=${termino}&type=artist`).pipe(map(data => data.artists.items));
+  }
+
+  getArtista( id: string ) {
+    return this.getQuery(`artists/${id}`).pipe(map(data => data));
+  }
+
+  getTopTracks( id: string ) {
+    return this.getQuery(`artists/${id}/top-tracks?country=us`).pipe(map(data => data.tracks));
   }
 }
